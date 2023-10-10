@@ -37,20 +37,23 @@ function playRound(playerSelection, getComputerChoice) {
 
 const buttonsDiv = document.querySelector('#buttons');
 buttonsDiv.addEventListener('click', (event) => {
-  let buttonClicked = event.target;
 
+  //the output paragraph
+  let output = document.querySelector('#output');
+
+  let buttonClicked = event.target;
 
   switch (buttonClicked.id) {
     case 'rock':
-      console.log(playRound('rock', getComputerChoice()));
+      output.textContent = playRound('rock', getComputerChoice());
       break;
 
     case 'paper':
-      console.log(playRound('paper', getComputerChoice()));
+      output.textContent = playRound('paper', getComputerChoice());
       break;
 
     case 'scissors':
-      console.log(playRound('scissors', getComputerChoice()));
+      output.textContent = playRound('scissors', getComputerChoice());
       break;
   }
 
