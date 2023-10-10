@@ -34,42 +34,27 @@ function playRound(playerSelection, getComputerChoice) {
     
 }
 
-// const playerSelection = 'rock';
-// const computerChoice = getComputerChoice();
-// console.log(playRound(playerSelection, computerChoice));
 
-function game() {
+const buttonsDiv = document.querySelector('#buttons');
+buttonsDiv.addEventListener('click', (event) => {
+  let buttonClicked = event.target;
 
-    const playerSelection1 = prompt('Rock, Paper, Scissors?');
-    const computerSelection1 = getComputerChoice();
-    console.log(playRound(playerSelection1, computerSelection1));
 
-    const playerSelection2 = prompt('Rock, Paper, Scissors?');
-    const computerSelection2 = getComputerChoice();
-    console.log(playRound(playerSelection2, computerSelection2));
+  switch (buttonClicked.id) {
+    case 'rock':
+      console.log(playRound('rock', getComputerChoice()));
+      break;
 
-    const playerSelection3 = prompt('Rock, Paper, Scissors?');
-    const computerSelection3 = getComputerChoice();
-    console.log(playRound(playerSelection3, computerSelection3));
+    case 'paper':
+      console.log(playRound('paper', getComputerChoice()));
+      break;
 
-    const playerSelection4 = prompt('Rock, Paper, Scissors?');
-    const computerSelection4 = getComputerChoice();
-    console.log(playRound(playerSelection4, computerSelection4));
+    case 'scissors':
+      console.log(playRound('scissors', getComputerChoice()));
+      break;
+  }
 
-    const playerSelection5 = prompt('Rock, Paper, Scissors?');
-    const computerSelection5 = getComputerChoice();
-    console.log(playRound(playerSelection5, computerSelection5));
 
-}
+});
 
-game();
 
-// var words = ['rock',
-// 'paper',
-// 'scissors'
-// ];
-// function randomWord(arr) {
-//     return arr[Math.floor(Math.random() * arr.length)];
-// }
-
-// alert(randomWord(words));
