@@ -9,31 +9,40 @@
     <script src="javascript.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <div id="introduction-div"><p>In the wake of an alien invasion on Earth, 
+
+    <section id="introduction-section">
+    <div id="introduction-div">
+        <p>In the wake of an alien invasion on Earth, 
         both sides have hit a stalemate. As both side have suffered
         comparable losses, it is decided that a game of RPS will
         be played to determine victor or vanquished. 
         The Mecurians and Earthians both select a champion. The fate
-        of your planet rests on your shoulders! </p></div>
+        of your planet rests on your shoulders! </p>
+    </div>
+    </section>
+
+
     <div id="results-div">
         <p id="output">Let's see you try!</p>
     </div>
 
-    <div id="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
-</br>
-<div>
-    <button id="start-and-reset">Are you ready? Go!</button>
-    <button id="player-quit">Quit Game</button>
-</div>
-</br>
-    <div id="scores">
+    <section id="scores">
         <div>Player: <span id="player-score"></span></div>
         <div>Tie: <span id="tie-score"></span></div>
         <div>Computer: <span id="computer-score"></span></div>
-    </div>
+    </section>
+
+    <section id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </section>
+</br>
+    <section id="reset-and-quit">
+        <button id="start-and-reset">Are you ready? Go!</button>
+        <button id="player-quit">Quit Game</button>
+    </section>
+</br>
+
 </body>
 </html>

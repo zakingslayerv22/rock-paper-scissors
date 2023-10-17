@@ -17,14 +17,13 @@ const enableGameButtons = () => {
     paperButton.disabled = false;
     scissorsButton.disabled = false;
     startButton.disabled = true;
-    output.textContent = "New Game Started! Yeah you're the man!"
 }
 
 startButton.addEventListener('click', () => {
 enableGameButtons();
 })
 
-//get computer choice
+
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     if (randomNumber === 1) {
@@ -36,6 +35,10 @@ function getComputerChoice() {
     }
 
 }
+
+// getComputerChoice();
+
+//console.log(getComputerChoice());
 
 let playerScore = 0;
 let computerScore = 0;
@@ -78,8 +81,8 @@ const resetGame = (whoWon) => {
     playerScoreDisplay.textContent = "";
     computerScoreDisplay.textContent = "";
     tieScoreDisplay.textContent = "";
-    output.textContent = "New Game Started! Yeah you're the man!"
-
+    document.querySelector("#output").textContent = "New Game Started! Yeah you're the man!"
+   
     disableGameButtons();
 
     
@@ -93,8 +96,24 @@ function playRound(playerSelection, getComputerChoice) {
     let result = '';
     
     console.log(message);
-  
-    //determine the winner of a round
+
+    if (playerScore === 5){
+        console.log(gameWinner = "You Win this round!");
+    }else if (computerScore === 5){
+        console.log(gameWinner = "You Lose! Computer wins this round!");
+    }
+
+    if(playerScore === 5 || computerScore === 5){
+        document.querySelector('#rock').disabled = true;
+        document.querySelector('#paper').disabled = true;
+        document.querySelector('#scissors').disabled = true;
+        // document.querySelector('start-and-reset')
+    }
+
+
+    
+
+    //determine the winner of a section
     if (playerSelection == getComputerChoice) {
         result = "draw";
         //return message += "It's a draw."; it wont capture the value
@@ -158,7 +177,8 @@ function playRound(playerSelection, getComputerChoice) {
 
 }
 
-//play when buttons are clicked
+
+
 const buttonsDiv = document.querySelector('#buttons');
 buttonsDiv.addEventListener('click', (event) => {
   
