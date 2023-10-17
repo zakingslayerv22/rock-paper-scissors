@@ -6,22 +6,26 @@ body {
      background-image: url("images/body-background.jpg");
      /* color: red; */
      font-weight: bold;
-     /* display: flex;
+     display: flex;
      flex-direction: column;
      justify-content: center;
-     align-items: center; */
+     align-items: center;
      margin-top: 0;
      margin-bottom: 0;
+     
 }
 
 #introduction-section {
-  margin-top: 40px;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    width: 800px;
   
 }
 
 #introduction-div p {
     font-size: 30px;
-    /* margin-bottom: 70px; */
+    /* border: 1px solid yellow; */
+    margin-bottom: 30px;
     
 }
 
@@ -30,11 +34,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100px;
+    
 }
 
 #results-div p {
     font-size: 40px;
-}
+}  
 
 #scores {
     display: flex;
@@ -43,6 +48,10 @@ body {
     gap: 55px;
     height: 100px;
     font-size: 30px;
+    padding: 0 50px;
+    border: 5px solid red;
+
+    
 }
 
 #buttons {
@@ -57,12 +66,24 @@ body {
     padding: 13px;
     font-size: 20px;
     border-radius: 5px;
-    /* background: red; */
+    background-color: rgb(206, 11, 11);
+    color: rgb(241, 210, 153);
 }
 
-/* ill come back to you */
- button:disabled {
-    background: rgb(255, 206, 206);
+#buttons button:hover {
+    color: rgb(244, 236, 230);
+}
+
+#buttons button:active {
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
+
+ #buttons button:disabled {
+    color: wheat;
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -79,4 +100,21 @@ body {
     padding: 13px;
     font-size: 20px;
     border-radius: 5px;
+    background-color: wheat;
+    color: black
+}
+
+#reset-and-quit button:active {
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
+
+ #reset-and-quit button:disabled {
+    background-color:  rgb(107, 96, 76);
+    color: white;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
