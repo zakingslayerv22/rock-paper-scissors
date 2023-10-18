@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <script src="javascript.js" type="text/javascript" defer></script>
 </head>
 <body>
 
     <section id="introduction-section">
     <div id="introduction-div">
-        <p>In the wake of an alien invasion on Earth, 
-        both sides have hit a stalemate. As both side have suffered
+        <p>In the wake of an alien invasion on Earth from the Mecurians, 
+        both sides have hit a stalemate. As both sides have suffered fairly
         comparable losses, it is decided that a game of RPS will
-        be played to determine victor or vanquished. 
-        The Mecurians and Earthians both select a champion. The fate
+        be played to determine victor and vanquished. 
+        The Mecurians and Earthians both select a champion - YOU. The fate
         of your planet rests on your shoulders! </p>
     </div>
     </section>
 
 
     <div id="results-div">
-        <p id="output">Let's see you try!</p>
+        <p id="output">Let's see you try to save your planet!</p>
     </div>
 
     <section id="scores">
-        <div>Player: <span id="player-score"></span></div>
+        <div class="human">Earthian: <span id="player-score"></span></div>
         <div>Tie: <span id="tie-score"></span></div>
-        <div>Computer: <span id="computer-score"></span></div>
+        <div class="computer">Mecurian: <span id="computer-score"></span></div>
     </section>
 
     <section id="buttons">
@@ -40,7 +41,7 @@
 </br>
     <section id="reset-and-quit">
         <button id="start-and-reset">Are you ready? Go!</button>
-        <button id="player-quit">Quit Game</button>
+        <!-- <button id="player-quit">Quit Game</button> -->
     </section>
 </br>
 

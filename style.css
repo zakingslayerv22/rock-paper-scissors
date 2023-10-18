@@ -4,7 +4,6 @@
 
 body {
      background-image: url("images/body-background.jpg");
-     /* color: red; */
      font-weight: bold;
      display: flex;
      flex-direction: column;
@@ -12,11 +11,11 @@ body {
      align-items: center;
      margin-top: 0;
      margin-bottom: 0;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
      
 }
 
 #introduction-section {
-    /* border: 1px solid red; */
     margin-top: 20px;
     width: 800px;
   
@@ -24,8 +23,9 @@ body {
 
 #introduction-div p {
     font-size: 30px;
-    /* border: 1px solid yellow; */
     margin-bottom: 30px;
+    text-align: justify;
+    color: wheat;
     
 }
 
@@ -49,9 +49,9 @@ body {
     height: 100px;
     font-size: 30px;
     padding: 0 50px;
-    border: 5px solid red;
-
-    
+    color: rgb(243, 119, 119);
+    border: 5px solid whitesmoke;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #buttons {
