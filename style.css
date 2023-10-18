@@ -1,5 +1,5 @@
 * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 body {
@@ -16,14 +16,13 @@ body {
 }
 
 #introduction-section {
-    margin-top: 20px;
     width: 800px;
   
 }
 
 #introduction-div p {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: justify;
     color: wheat;
     
@@ -39,7 +38,8 @@ body {
 
 #results-div p {
     font-size: 40px;
-}  
+    color: rgb(241, 234, 221);
+}
 
 #scores {
     display: flex;

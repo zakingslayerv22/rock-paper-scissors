@@ -1,9 +1,5 @@
 // define buttons 
 
-//i used a switch statement later down because i want to too much
-//event listeners will directly impact page performance
-//see Event delegation
-//https://www.javascripttutorial.net/javascript-dom/javascript-event-delegation/
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
@@ -17,7 +13,7 @@ const enableGameButtons = () => {
     paperButton.disabled = false;
     scissorsButton.disabled = false;
     startButton.disabled = true;
-    output.textContent = "New Game Started! Yeah you're the man!"
+    output.textContent = "Don't fail! Earth is hoping on you!"
 }
 
 startButton.addEventListener('click', () => {
@@ -34,7 +30,6 @@ function getComputerChoice() {
     } else {
         return 'Scissors';
     }
-
 }
 
 let playerScore = 0;
@@ -85,7 +80,6 @@ const resetGame = (whoWon) => {
     
   };
 
-  
 
 
 function playRound(playerSelection, getComputerChoice) {
@@ -97,19 +91,13 @@ function playRound(playerSelection, getComputerChoice) {
     //determine the winner of a round
     if (playerSelection == getComputerChoice) {
         result = "draw";
-        //return message += "It's a draw."; it wont capture the value
-        //of the result variable because there's a return statement
-        // Since the return statement will exit the if condition,
-        // the content of the result variable will not be able 
-        //leave (or be captured)
     }
     else if (playerSelection === 'Rock'){
             if (getComputerChoice == 'Paper'){
                 result = "you lose";//paper beats rock
             
             }else {
-                result = "you win";//rock beats scissors
-                
+                result = "you win";//rock beats scissors  
             }
         }
     else if (playerSelection === 'Paper'){
@@ -130,8 +118,6 @@ function playRound(playerSelection, getComputerChoice) {
                 
             }    
     }
-
-
 
     //display scores
     if (result === 'draw'){
@@ -154,7 +140,6 @@ function playRound(playerSelection, getComputerChoice) {
           }
         return "You Lose! " + getComputerChoice + " beats " + playerSelection+".";
     }
-
 
 }
 
@@ -179,7 +164,6 @@ buttonsDiv.addEventListener('click', (event) => {
       output.textContent = playRound('Scissors', getComputerChoice());
       break;
   }
-
-
+  
 });
 
